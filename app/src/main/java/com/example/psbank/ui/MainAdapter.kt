@@ -38,7 +38,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         holder.binding.textCurrencyName.text = currencyMap[currency]?.Name ?: ""
         holder.binding.textCurrencyName.text = currencyMap[currency]?.Name ?: ""
         holder.binding.textCurrencyNominal.text = currencyMap[currency]?.Nominal.toString()
-        holder.binding.textCurrencyValue.text = currencyMap[currency]?.Value.toString()
+        holder.binding.textCurrencyValue.text = "${currencyMap[currency]?.Value}₽"
 
         val colorString = currencyMap[currency]?.NumCode.toString()
         val red = colorString[0].toString().toInt() * 16

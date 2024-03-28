@@ -6,5 +6,10 @@
 проверьте подключение к сети!</string>
     <string name="last_update_text">Последнее обновление:</string>
     <string name="Currency">Валюта</string>
+    <string name="test_text_currensy_name">Фунт стерлингов Соединенного королевства</string>
+    <string name="nominal">Номинал:</string>
+    <string name="nominal_example">10</string>
+    <string name="percent_example">0.45%</string>
+    <string name="value_example">60.4533₽</string>
 
 </resources>

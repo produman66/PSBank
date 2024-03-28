@@ -43,7 +43,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Фунт стерлингов Соединенного королевства"
+            android:text="@string/test_text_currensy_name"
             android:ellipsize="end"
             android:maxLines="1"
             android:textColor="@color/black"
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="8dp"
-            android:text="Номинал: "
+            android:text="@string/nominal"
             android:fontFamily="@font/montserrat_medium"
             app:layout_constraintStart_toEndOf="@+id/frameValute"
             app:layout_constraintTop_toBottomOf="@+id/textCurrencyName" />
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/montserrat_medium"
-            android:text="10"
+            android:text="@string/nominal_example"
             app:layout_constraintStart_toEndOf="@+id/data_text"
             app:layout_constraintTop_toBottomOf="@+id/textCurrencyName" />
 
@@ -80,7 +80,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="60.4533₽"
+            android:text="@string/value_example"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -107,7 +107,7 @@
                 android:textSize="12sp"
                 android:fontFamily="@font/montserrat_regular"
                 android:textColor="@color/white"
-                android:text="0.45%" />
+                android:text="@string/percent_example" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
