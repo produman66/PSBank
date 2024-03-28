@@ -34,11 +34,11 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         val currency = currencyList[position]
         val context = holder.itemView.context
 
-        holder.binding.currencyCharCode.text = currency
-        holder.binding.currencyName.text = currencyMap[currency]?.Name ?: ""
-        holder.binding.currencyName.text = currencyMap[currency]?.Name ?: ""
-        holder.binding.currencyNominal.text = currencyMap[currency]?.Nominal.toString()
-        holder.binding.currencyValue.text = currencyMap[currency]?.Value.toString()
+        holder.binding.textCurrencyCharCode.text = currency
+        holder.binding.textCurrencyName.text = currencyMap[currency]?.Name ?: ""
+        holder.binding.textCurrencyName.text = currencyMap[currency]?.Name ?: ""
+        holder.binding.textCurrencyNominal.text = currencyMap[currency]?.Nominal.toString()
+        holder.binding.textCurrencyValue.text = currencyMap[currency]?.Value.toString()
 
         val colorString = currencyMap[currency]?.NumCode.toString()
         val red = colorString[0].toString().toInt() * 16
@@ -54,12 +54,12 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
         if (change > 0) {
             holder.binding.framePercent.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.green))
-            holder.binding.arrow.setImageResource(R.drawable.baseline_arrow_drop_up_24)
-            holder.binding.currencyPercent.text = "+${"%.2f".format(change)}%"
+            holder.binding.imageArrow.setImageResource(R.drawable.baseline_arrow_drop_up_24)
+            holder.binding.textCurrencyPercent.text = "+${"%.2f".format(change)}%"
         } else {
             holder.binding.framePercent.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.red))
-            holder.binding.arrow.setImageResource(R.drawable.baseline_arrow_drop_down_24)
-            holder.binding.currencyPercent.text = "${"%.2f".format(change)}%"
+            holder.binding.imageArrow.setImageResource(R.drawable.baseline_arrow_drop_down_24)
+            holder.binding.textCurrencyPercent.text = "${"%.2f".format(change)}%"
         }
 
     }

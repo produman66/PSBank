@@ -23,7 +23,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
             <TextView
-                android:id="@+id/currencyCharCode"
+                android:id="@+id/textCurrencyCharCode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_bold"
@@ -36,7 +36,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/currencyName"
+            android:id="@+id/textCurrencyName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -47,7 +47,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toStartOf="@+id/currencyValue"
+            app:layout_constraintEnd_toStartOf="@+id/textCurrencyValue"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/frameValute"
             app:layout_constraintTop_toTopOf="parent" />
@@ -61,20 +61,20 @@
             android:text="Номинал: "
             android:fontFamily="@font/montserrat_medium"
             app:layout_constraintStart_toEndOf="@+id/frameValute"
-            app:layout_constraintTop_toBottomOf="@+id/currencyName" />
+            app:layout_constraintTop_toBottomOf="@+id/textCurrencyName" />
 
         <TextView
-            android:id="@+id/currencyNominal"
+            android:id="@+id/textCurrencyNominal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/montserrat_medium"
             android:text="10"
             app:layout_constraintStart_toEndOf="@+id/data_text"
-            app:layout_constraintTop_toBottomOf="@+id/currencyName" />
+            app:layout_constraintTop_toBottomOf="@+id/textCurrencyName" />
 
         <TextView
-            android:id="@+id/currencyValue"
+            android:id="@+id/textCurrencyValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -92,16 +92,16 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/currencyValue"
+            app:layout_constraintTop_toBottomOf="@+id/textCurrencyValue"
             android:gravity="center"
             android:paddingHorizontal="4dp">
             <ImageView
-                android:id="@+id/arrow"
+                android:id="@+id/imageArrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_arrow_drop_down_24" />
             <TextView
-                android:id="@+id/currencyPercent"
+                android:id="@+id/textCurrencyPercent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
