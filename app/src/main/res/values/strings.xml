@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PSBank</string>
+
+    <string name="error_message_server">"Ошибка в запросе к серверу"</string>
+    <string name="error_message_network">Произошла ошибка при загрузке данных,
+проверьте подключение к сети!</string>
+    <string name="last_update_text">Последнее обновление:</string>
+    <string name="Currency">Валюта</string>
+
+</resources>
