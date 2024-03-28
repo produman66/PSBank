@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     private val handler = Handler(Looper.getMainLooper())
     private val updateInterval: Long = 30 * 1000
 
-    private var screenInitialized = true
+    private var screenNotInitialized = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
 
 
         mainVM.observeLoadingLiveData().observe(this, Observer { isLoading ->
-            if (isLoading && screenInitialized) {
+            if (isLoading && screenNotInitialized) {
                 binding.messageError.visibility = View.GONE
                 binding.progressBar.visibility = View.VISIBLE
             } else {
@@ -86,7 +86,9 @@ class MainActivity : AppCompatActivity() {
             if (error != null) {
                 val (_, errorMessage) = error
                 if (errorMessage != null) {
-                    showError(binding, getString(R.string.error_message_server))
+                    if (screenNotInitialized){
+                        showError(binding, getString(R.string.error_message_server))
+                    }
                 } else {
                     showSuccess(binding)
                 }
@@ -113,7 +115,7 @@ class MainActivity : AppCompatActivity() {
         binding.messageError.visibility = View.VISIBLE
         binding.textError.text = errorMessage
 
-        screenInitialized = true
+        screenNotInitialized = true
     }
 
 
@@ -128,7 +130,7 @@ class MainActivity : AppCompatActivity() {
         binding.textTheLatestUpdateTime.text = formattedTime
 
         binding.messageError.visibility = View.GONE
-        screenInitialized = false
+        screenNotInitialized = false
     }
 
 
