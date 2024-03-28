@@ -112,6 +112,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.messageError.visibility = View.VISIBLE
         binding.textError.text = errorMessage
+
+        screenInitialized = true
     }
 
 
